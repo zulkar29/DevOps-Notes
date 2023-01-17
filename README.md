@@ -13,7 +13,7 @@ DevOps is the combination of two words, Here the mearning Dev is development and
 1. Porgramming 
 2. Operatinng system
 3. Networking
-4. Tools: 
+4. Tools:  \
     4.1 Version control: GitHub \
     4.2 Containirazition: Docker, Kubernetes \
     4.3 Monitoring: nagios \
