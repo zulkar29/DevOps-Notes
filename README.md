@@ -6,6 +6,8 @@ GitHub \
 GitHub Action \
 Docker\
 Kubernetes 
+Terraform
+Jenkins
 
 # DevOps Roadmap
 DevOps is the combination of two words, Here the mearning Dev is development and the meaning of Ops is operations. Its a set of practice or philosophy. Not any tools. For become a devOps engineer we have to learn differnt concept, tools and technology. Below we are trying to show a roadmap about how to become a DevOps engineer. 
