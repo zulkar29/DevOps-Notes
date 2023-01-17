@@ -22,3 +22,8 @@ DevOps is the combination of two words, Here the mearning Dev is development and
 ### Projects we should do:
 3 Tier architecture deployment \
 Container based deployment 
+
+### Certification we can take
+1. AWS :
+2. Azure :
+3. GCP :
