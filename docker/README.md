@@ -15,7 +15,7 @@
     1. [Introduction to docker container](#docker-container)
     2. [Container cheat sheet](#container-cheat-sheet)
 5. [Docker networking](#docker-networking)
-    1. [Introduction to docker networking](#docker-networking)
+    1. [Different Types of Docker Network](#Different-Types-of-Docker-Network)
     2. [Networking cheat sheet](#Networking-cheat-sheet)
 6. [Docker compose](#docker-compose)     
 6. [Some miss conception about docker](#docker-misconception)
@@ -82,6 +82,15 @@
 ## Docker networking
 New network Example: ```docker network create --driver <driver-name> <network name>``` \
 Connect a Docker Container to a Network example: ```docker network connect <network_id or n_name> <container_id or c_name>``` 
+
+#### Different Types of Docker Network: \
+**bridge(Default)**: The default network driver. If you don’t specify a driver, this is the type of network you are creating. Bridge networks are usually used when your applications run in standalone containers that need to communicate.\
+**host**: For standalone containers, remove network isolation between the container and the Docker host, and use the host’s networking directly. \
+**overlay**:  Overlay networks connect multiple Docker daemons together and enable swarm services to communicate with each other. \
+**ipvlan**:  IPvlan networks give users total control over both IPv4 and IPv6 addressing. \
+**macvlan** : Macvlan networks allow us to assign a MAC address to a container.\
+**none**: This one used for disable all networking \
+**Also we can make other network by using third party plugin
 
 ### Networking cheat sheet
 | Networking Command | Networking Description | 
