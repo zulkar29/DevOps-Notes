@@ -17,9 +17,11 @@
     2. [Container cheat sheet](#file-command)
 5. [Docker networking](#networking)
     1. [Introduction to docker networking](#subparagraph1)
-    2. [Networking cheat sheet](#file-command)
+    2. [Networking cheat sheet](#Networking-cheat-sheet)
 6. [Some miss conception about docker](#docker-misconception)
 7. [Best practices](#best-practices)
+
+#introduction
 
 ### Docker architecture
 It have five part: registry, image, container, daemon, and client.
@@ -28,10 +30,13 @@ It have five part: registry, image, container, daemon, and client.
 | Image Command | Command description | 
 | --------------- | --------------- |
 |```docker image ls```|List of all local image |
-|```docker image build```|Build an image from a Dockerfile| 
-|```docker image inspect```|detailed information of images | 
+|```docker image build -t <image_name> .```|Build an image from a Dockerfile| 
+|```docker image history```|Show the history of an image|
+|```docker image inspect```|detailed information of images| 
+|```docker image push```|Push image to registry|
 |```docker image prune```| Remove all unused images | 
 |```docker network rm```| Remove one or more images | 
+
 
 ### Container cheat sheet
 | Container Command | Command description | 
@@ -44,7 +49,7 @@ It have five part: registry, image, container, daemon, and client.
 
 
 ### Networking cheat sheet
-| (__Networking Command__) | (**Networking Description**) | 
+| Networking Command | Networking Description | 
 | --------------- | --------------- |
 |```docker network ls``` | List networks |
 |```docker network create``` | Create a network | 
