@@ -37,10 +37,20 @@
 |```docker info```|Display full information|
 |```docker login -u <username>```|Login into Docker| 
 |```docker push <username>/<image_name>```|Publish an image to Docker Hub|
-|```docker image inspect```|detailed information of images| 
-|```docker image push```|Push image to registry|
-|```docker image prune```| Remove all unused images | 
+|```docker system df``|docker daemon disk space usage| 
+|```docker system prune -af```|Remove images, networks, containers, and volumes|
+|```docker stats```|Resource usage by Docker containers| 
 |```docker rmi <image_name>```|Delete an Image| 
+
+### Common tag use by Docker
+| Tag name | Tag meaning | 
+| --------------- | --------------- |
+|```-d```|detouched mode / backgound run|
+|```-p```|port mapping| 
+|```-it```|Interactive mode| 
+|```-t```|for set tag name|
+|```-f```|force|
+
 
 ### Image cheat sheet
 | Image Command | Command description | 
@@ -66,18 +76,21 @@
 |```docker run -d <image_name>```|Run a container in the background| 
 |```docker inspect <container_name/ id> ```|To inspect a running container|
 |```docker start or stop <container_name/id>```|Start or stop an existing container|  
+|```docker restart <container name>```|Restart a container| 
 |```docker rm <container name>```| Remove a stopped container| 
 
 ## Docker networking
-
+New network Example: ```docker network create --driver <driver-name> <network name>```
+onnect a Docker Container to a Network example: ```docker network connect <network_id or n_name> <container_id or c_name>``` 
 
 ### Networking cheat sheet
 | Networking Command | Networking Description | 
 | --------------- | --------------- |
 |```docker network ls``` | List networks |
 |```docker network create``` | Create a network | 
-|```docker network connect``` | Connect a container to a network | 
-|```docker network disconnect```| Dic connect docker network |
-|```docker network inspect```| See network info details |
-|```docker network prune``` | Remove all unused networks | 
-|```docker network rm``` | Remove one or more networks |  
+|```docker network connect [network] [container]``` |Connect a container to a network| 
+|```docker network disconnect [network] [container]``` |disconnect a container to a network|
+|```docker network disconnect```|Dic connect docker network|
+|```docker network inspect [network]```|See network info details|
+|```docker network prune``` |Remove all unused networks| 
+|```docker network rm [network]``` |Remove one or more networks|  
