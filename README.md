@@ -20,6 +20,6 @@ DevOps is the combination of two words, Here the mearning Dev is development and
 Container based deployment 
 
 ### Certification we can take
-1. AWS :
-2. Azure :
+1. AWS : AWS Cloud practitioner => 
+2. Azure : Azure 900
 3. GCP :
