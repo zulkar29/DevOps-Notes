@@ -23,13 +23,23 @@
 
 #introduction
 
+### Container cheat sheet
+| Container Command | Command description | 
+| --------------- | --------------- |
+|```docker ps```|Running containers list |
+|```docker exec -it <container name> /bin/sh```| SSH access inside container | 
+|```docker create <image_name>```| Connect a container to a network | 
+|```docker network prune```| Remove all unused networks | 
+|```docker network rm```| Remove one or more networks | 
+
 
 ### Networking cheat sheet
-
-| Networking Command | Networking Description | 
+| (__Networking Command__) | (**Networking Description**) | 
 | --------------- | --------------- |
-| docker network ls | List networks |
-| docker network create | Create a network | 
-| docker network connect | Connect a container to a network | 
-| docker network prune | Remove all unused networks | 
-|docker network rm | Remove one or more networks |  
+|```docker network ls``` | List networks |
+|```docker network create``` | Create a network | 
+|```docker network connect``` | Connect a container to a network | 
+|```docker network disconnect```| Dic connect docker network |
+|```docker network inspect```| See network info details |
+|```docker network prune``` | Remove all unused networks | 
+|```docker network rm``` | Remove one or more networks |  
