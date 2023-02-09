@@ -37,7 +37,7 @@
 |```docker info```|Display full information|
 |```docker login -u <username>```|Login into Docker| 
 |```docker push <username>/<image_name>```|Publish an image to Docker Hub|
-|```docker system df``|docker daemon disk space usage| 
+|```docker system df```|docker daemon disk space usage| 
 |```docker system prune -af```|Remove images, networks, containers, and volumes|
 |```docker stats```|Resource usage by Docker containers| 
 |```docker rmi <image_name>```|Delete an Image| 
@@ -80,8 +80,8 @@
 |```docker rm <container name>```| Remove a stopped container| 
 
 ## Docker networking
-New network Example: ```docker network create --driver <driver-name> <network name>```
-onnect a Docker Container to a Network example: ```docker network connect <network_id or n_name> <container_id or c_name>``` 
+New network Example: ```docker network create --driver <driver-name> <network name>``` \
+Connect a Docker Container to a Network example: ```docker network connect <network_id or n_name> <container_id or c_name>``` 
 
 ### Networking cheat sheet
 | Networking Command | Networking Description | 
