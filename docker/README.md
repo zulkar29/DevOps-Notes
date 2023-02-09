@@ -65,7 +65,7 @@
 |```docker run -p <host_port>:<c_port> <image_name>```|Run container with port|
 |```docker run -d <image_name>```|Run a container in the background| 
 |```docker inspect <container_name/ id> ```|To inspect a running container|
-|```docker start|stop <container_name/id>```|Start or stop an existing container|  
+|```docker start or stop <container_name/id>```|Start or stop an existing container|  
 |```docker rm <container name>```| Remove a stopped container| 
 
 ## Docker networking
