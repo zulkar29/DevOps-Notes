@@ -5,23 +5,23 @@
     1. [What is docker](#dockerIntroduction)
     2. [why docker](#dockerIntroduction)
     3. [How to install docker](#dockerIntroduction)
-    4. [Docker architecture](#dockerIntroduction)
-2. [Docker File](#docker-file)  
+    4. [Docker architecture](#docker-architecture)
+2. [Docker File](#docker-file)
     1. [Introduction to docker file](#subparagraph1)
     2. [Docker file cheat sheet](#file-command)
 3. [Docker Image](#paragraph1)  
     1. [Introduction to docker Image](#subparagraph1)
-    2. [Image cheat sheet](#file-command)
+    2. [Image cheat sheet](#image-cheat-sheet)
 4. [Docker container](#paragraph2)
     1. [Introduction to docker container](#subparagraph1)
-    2. [Container cheat sheet](#file-command)
+    2. [Container cheat sheet](#container-cheat-sheet)
 5. [Docker networking](#networking)
     1. [Introduction to docker networking](#subparagraph1)
     2. [Networking cheat sheet](#Networking-cheat-sheet)
 6. [Some miss conception about docker](#docker-misconception)
 7. [Best practices](#best-practices)
 
-#introduction
+# Introduction
 
 ### Docker architecture
 It have five part: registry, image, container, daemon, and client.
