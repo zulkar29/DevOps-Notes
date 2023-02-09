@@ -23,13 +23,13 @@
 
 # Introduction
 
-### Docker architecture
+### Docker architecture 
 #### It have five part:
-**Registry:** Its host public and official images.
-**Image:** Bluprint for run container.
-**Container:** Instance on Image. After run image we get container.
-**Daemon:** Its a service that run on host OS and manage docker image and container creation, run and monitoring.
-**Client:** Talk to daemon via API.
+**Registry:** Its host public and official images. \
+**Image:** Bluprint for run container. \
+**Container:** Instance on Image. After run image we get container. \
+**Daemon:** Its a service that run on host OS and manage docker image and container creation, run and monitoring. \
+**Client:** Talk to daemon via API. 
 
 ### Docker general command
 | Image Command | Command description | 
