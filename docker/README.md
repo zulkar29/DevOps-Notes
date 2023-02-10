@@ -31,6 +31,9 @@
 **Daemon:** Its a service that run on host OS and manage docker image and container creation, run and monitoring. \
 **Client:** Talk to daemon via API. 
 
+![architecture](https://user-images.githubusercontent.com/14360563/217986211-f6c0e233-f845-439c-94d0-dd67180df36c.svg)
+
+
 ### Docker general command
 | Image Command | Command description | 
 | --------------- | --------------- |
