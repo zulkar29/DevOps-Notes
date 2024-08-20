@@ -87,19 +87,18 @@ New network Example: ```docker network create --driver <driver-name> <network na
 Connect a Docker Container to a Network example: ```docker network connect <network_id or n_name> <container_id or c_name>``` 
 
 #### Different Types of Docker Network: \
-**bridge(Default)**: The default network driver. If you don’t specify a driver, this is the type of network you are creating. Bridge networks are usually used when your applications run in standalone containers that need to communicate.\
-**host**: For standalone containers, remove network isolation between the container and the Docker host, and use the host’s networking directly. \
-**overlay**:  Overlay networks connect multiple Docker daemons together and enable swarm services to communicate with each other. \
-**ipvlan**:  IPvlan networks give users total control over both IPv4 and IPv6 addressing. \
-**macvlan** : Macvlan networks allow us to assign a MAC address to a container.\
-**none**: This one used for disable all networking \
+1. **Bridge Network**: This is the default network in docker and all the docker containers will be connected to it if no custom network is specified.
+2. **Host Network**: This Network removes the network isolation between docker container and Docker host. Both utilize the same network.
+3. **Overlay Network**: This type of network allows swarm services to connect with each other. It also allows communication between multiple Docker daemons. This network type is used in Docker Swarm.
+4. **None Network**: This type of docker network completely isolates the docker container in terms of networking.
+5. **Macvlan Network**: This Macvlan network allows you to assign a MAC address to a container, making it appear as a physical device on your network.
 **Also we can make other network by using third party plugin
 
 ### Networking cheat sheet
 | Networking Command | Networking Description | 
 | --------------- | --------------- |
 |```docker network ls``` | List networks |
-|```docker network create``` | Create a network | 
+|```docker network create -d <driver_name> <network_name>	``` | Creates a user-defined network | 
 |```docker network connect [network] [container]``` |Connect a container to a network| 
 |```docker network disconnect [network] [container]``` |disconnect a container to a network|
 |```docker network disconnect```|Dic connect docker network|
