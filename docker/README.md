@@ -106,3 +106,20 @@ Connect a Docker Container to a Network example: ```docker network connect <netw
 |```docker network inspect [network]```|See network info details|
 |```docker network prune``` |Remove all unused networks| 
 |```docker network rm [network]``` |Remove one or more networks|  
+
+
+## Docker Volumes
+
+### Introduction to Docker Volumes
+Docker volumes are directories on the host filesystem that persist even after the container exits. They are a way to share data between a container and the host or between multiple containers.
+
+### Volumes Cheat Sheet
+| Volume Command | Command description | 
+| --------------- | --------------- |
+|`docker volume ls`|List all volumes|
+|`docker volume create <volume_name>`|Create a Docker volume| 
+|`docker volume inspect <volume_name>`|Get detailed information about a volume|
+|`docker run -v <volume_name>:<container_path> <image_name>`|Attach a volume to a container|
+|`docker volume prune`|Remove all unused volumes| 
+|`docker volume rm <volume_name>`|Remove a specific volume| 
+
