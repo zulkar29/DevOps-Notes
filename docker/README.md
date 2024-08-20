@@ -123,3 +123,42 @@ Docker volumes are directories on the host filesystem that persist even after th
 |`docker volume prune`|Remove all unused volumes| 
 |`docker volume rm <volume_name>`|Remove a specific volume| 
 
+# Docker Compose 
+
+Docker Compose is a tool for defining and running multi-container Docker applications. It uses YAML files to configure the application's services.
+
+Below is a rundown of the common Docker Compose commands also shown with their corresponding descriptions in a tabular form:
+
+| Docker Compose Commands | Description |
+| --- | --- |
+| `docker-compose up` | Build, create, start, and attach to containers for a service |
+| `docker-compose down` | Stop and remove containers, networks, images, and volumes |
+| `docker-compose build` | Build or rebuild services |
+| `docker-compose ps` | List containers |
+| `docker-compose start` | Start services |
+| `docker-compose stop` | Stop services |
+| `docker-compose restart` | Restart services |
+| `docker-compose rm` | Remove stopped containers |
+| `docker-compose logs` | View output from containers |
+| `docker-compose pull` | Pull service images |
+| `docker-compose exec` | Execute a command in a running container |
+
+An example Docker Compose file usually consists of the following configuration:
+
+```yaml
+version: '3'
+services:
+    web:
+        image: nginx:alpine
+        ports:
+            - "80:80"
+    database:
+        image: postgres
+        volumes:
+            - db_data:/var/lib/postgresql/data
+volumes:
+    db_data:
+```
+In the above example, we define two services, `web` and `database`. The `web` service uses the `nginx:alpine` image and maps port 80 on the host to port 80 on the container. The `database` service uses the `postgres` image and mounts the named volume `db_data` at the path `/var/lib/postgresql/data`.
+
+Please note that Docker Compose is suited for development and testing environments, and for simpler production deployments. If you need to deploy in production, using `docker swarm` or a Kubernetes-based platform may be more suitable.
