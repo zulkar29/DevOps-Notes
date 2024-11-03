@@ -56,14 +56,50 @@ Commands for analyzing and managing disk space.
 | du | Estimate File & Directory Space Usage |
 | fdisk | Disk Partition Manipulation |
 
+
 ## Ownership & Permissions
-Commands for managing file and directory permissions.
-| Command | Description |
-| --- | --- |
-| chmod | Change Mode - modify file permissions |
-| chown | Change Owner - modify file ownership |
-| chgrp | Change Group - modify group ownership |
 
+### Basic Permission Commands
+| Command | Description | Example |
+| --- | --- | --- |
+| chmod | Change Mode - modify file permissions | `chmod 755 file.txt` |
+| chown | Change Owner - modify file ownership | `chown user:group file.txt` |
+| chgrp | Change Group - modify group ownership | `chgrp dbadmin file.txt` |
+| ls -l | List files with permission details | `ls -l /var/lib/mysql/` |
+| stat | Display file status and permissions | `stat file.txt` |
+| umask | Set default permissions for new files | `umask 022` |
+| getfacl | Display file ACL permissions | `getfacl file.txt` |
+| setfacl | Modify file ACL permissions | `setfacl -m u:user:rx file.txt` |
 
----
+### Understanding Permission Notation
+
+#### Symbolic Notation (Letters)
+| Symbol | Category | Permission |
+| --- | --- | --- |
+| r | Read | View file contents or list directory contents |
+| w | Write | Modify file or create/delete files in directory |
+| x | Execute | Execute file or access directory |
+| - | None | No permission granted |
+
+#### Numeric Notation (Octal)
+| Number | Permission Combination | Symbolic Equivalent |
+| --- | --- | --- |
+| 0 | No Permission | --- |
+| 1 | Execute Only | --x |
+| 2 | Write Only | -w- |
+| 3 | Write and Execute | -wx |
+| 4 | Read Only | r-- |
+| 5 | Read and Execute | r-x |
+| 6 | Read and Write | rw- |
+| 7 | Read, Write, and Execute | rwx |
+
+### Common Permission Patterns
+| Octal | Symbolic | Use Case |
+| --- | --- | --- |
+| 755 | rwxr-xr-x | Executable files, directories |
+| 644 | rw-r--r-- | Regular files |
+| 777 | rwxrwxrwx | Full access (use with caution) |
+| 700 | rwx------ | Private files |
+| 600 | rw------- | Sensitive config files |
+| 440 | r--r----- | Read-only for user and group |
 
