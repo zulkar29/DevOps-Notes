@@ -113,7 +113,7 @@ flowchart TB
     LGWR --> RL
     CKPT --> CF
     
-    BC  DF
+    BC <--> DF
     RLB --> RL
     RL --> AL
 ```
