@@ -69,6 +69,9 @@ Understanding Oracle's internal structure is crucial for effective administratio
    - **Extents**: Contiguous blocks allocated for storing data.
    - **Blocks**: The smallest units of storage that Oracle reads or writes.
 
+![Oracle Database Architecture](./oracle-architecture.svg)
+
+```mermaid
 flowchart TB
     subgraph Client["Client Application"]
         CP[Client Process]
@@ -110,10 +113,12 @@ flowchart TB
     LGWR --> RL
     CKPT --> CF
     
-    BC <--> DF
+    BC  DF
     RLB --> RL
     RL --> AL
----
+```
+
+
 
 ## Installing Oracle Database
 
